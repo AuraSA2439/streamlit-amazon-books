@@ -101,7 +101,7 @@ if uploaded_file is not None:
         if 'Genre' in filtered_df.columns and 'Price' in filtered_df.columns:
             st.subheader("⭐ Average Price by Genre")
             avg_price_by_genre = filtered_df.groupby('Genre', as_index=False)['Price'].mean()
-            fig = px.bar(
+            fig = px.line(
                 avg_price_by_genre,
                 x='Genre',
                 y='Price',
