@@ -106,7 +106,9 @@ if uploaded_file is not None:
                 x='Genre',
                 y='Price',
                 labels={"Genre": "Genre", "Price": "Average Price"},
-                color='Price',
+                markers=True,
+                line_shape="linear"
+                # color='Price',
                 # color_continuous_scale="sunsetdark"
             )
             st.plotly_chart(fig)
